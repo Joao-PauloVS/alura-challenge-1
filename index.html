@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-links">
+            <a class="cabecalho-links-botao" href="https://www.alura.com.br/">
+                <img src="assets/logo.png" alt="Logo da Alura">
+            </a>
+            <a class="cabecalho-links-botao" href="https://www.linkedin.com/in/joao-paulo-vieira-santos/">
+                <img src="assets/linkedin.png" alt="Logo do Linkedin">
+            </a>
+            <a class="cabecalho-links-botao" href="https://github.com/Joao-PauloVS">
+                <img src="assets/github.png" alt="Logo do Github">
+            </a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao-inicial">
+            <textarea class="texto" name="texto" id="texto" minlength="10" maxlength="500" onfocus="limpaTexto()">Digite seu texto</textarea>
+            <p class="apresentacao-inicial-aviso">
+                <img src="assets/exclamacao.svg" alt="símbolo de exclamação">
+                Apenas letras minúsculas sem acentos.</p>
+            <div class="apresentacao-texto-botoes">
+                <button class="criptografar apresentacao-texto-botoes-estilo" id="criptografar" onclick="criptografar()">Criptografar</button>
+                <button class="descriptografar apresentacao-texto-botoes-estilo" id="descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="apresentacao-resultado">
+            <div class="resultado-aviso" id="avisos">
+                <img class="menino" src="assets/menino.svg" alt="Desenho de um menino com lupa procurando algo">
+                <strong>Nenhuma mensagem encontrada</strong>
+                <p class="resultado-instrucao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="resultado-criptografado" id="resultado-criptografado" style="display: none;">
+                <textarea class="resultado-texto" id="resultado-texto" readonly></textarea>
+                <button class="resultado-botao" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
