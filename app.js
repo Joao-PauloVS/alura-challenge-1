@@ -7,11 +7,11 @@ function limpaTexto(){
 
 function criptografar(){
     let texto = document.getElementById("texto").value;
-    let criptografado = texto.replace(/u/g, "ufat")
-                             .replace(/o/g, "ober")
+    let criptografado = texto.replace(/e/g, "enter")
                              .replace(/i/g, "imes")
-                             .replace(/e/g, "enter")
-                             .replace(/a/g, "ai");
+                             .replace(/a/g, "ai")
+                             .replace(/o/g, "ober")
+                             .replace(/u/g, "ufat");
     
     
     document.getElementById("resultado-texto").innerText = criptografado;
@@ -38,11 +38,9 @@ function descriptografar(){
 }
 
 function copiar(){
-    let textoCopiado = document.getElementById("resultado-texto");
+    let textoCopiado = document.getElementById("resultado-texto").innerText;
 
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0, 99999);
-    document.execCommand("copy");
+    navigator.clipboard.writeText(textoCopiado);
 }
 
 function esconderAvisos(){
@@ -51,9 +49,4 @@ function esconderAvisos(){
 
 function revelarResultado(){
     document.getElementById("resultado-criptografado").style.display = "flex"; 
-}
-
-function mudaCor(){
-    let retangulo = document.getElementById("apresentacao-resultado");
-    retangulo.style.backgroundColor = 'var(--cor-2)';
 }

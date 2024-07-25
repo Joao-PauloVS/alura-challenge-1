@@ -9,20 +9,20 @@
 <body>
     <header class="cabecalho">
         <nav class="cabecalho-links">
-            <a class="cabecalho-links-botao" href="https://www.alura.com.br/">
+            <a class="cabecalho-links-botao" href="https://www.alura.com.br/" target="_blank">
                 <img src="assets/logo.png" alt="Logo da Alura">
             </a>
-            <a class="cabecalho-links-botao" href="https://www.linkedin.com/in/joao-paulo-vieira-santos/">
+            <a class="cabecalho-links-botao" href="https://www.linkedin.com/in/joao-paulo-vieira-santos/" target="_blank">
                 <img src="assets/linkedin.png" alt="Logo do Linkedin">
             </a>
-            <a class="cabecalho-links-botao" href="https://github.com/Joao-PauloVS">
+            <a class="cabecalho-links-botao" href="https://github.com/Joao-PauloVS" target="_blank">
                 <img src="assets/github.png" alt="Logo do Github">
             </a>
         </nav>
     </header>
     <main class="apresentacao">
         <section class="apresentacao-inicial">
-            <textarea class="texto" name="texto" id="texto" minlength="10" maxlength="500" onfocus="limpaTexto()">Digite seu texto</textarea>
+            <textarea class="texto" name="texto" id="texto" minlength="0" maxlength="500" onfocus="limpaTexto()">Digite seu texto</textarea>
             <p class="apresentacao-inicial-aviso">
                 <img src="assets/exclamacao.svg" alt="símbolo de exclamação">
                 Apenas letras minúsculas sem acentos.</p>
@@ -38,7 +38,7 @@
                 <p class="resultado-instrucao">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
             <div class="resultado-criptografado" id="resultado-criptografado" style="display: none;">
-                <textarea class="resultado-texto" id="resultado-texto" readonly></textarea>
+                <p class="resultado-texto" id="resultado-texto"></p>
                 <button class="resultado-botao" onclick="copiar()">Copiar</button>
             </div>
         </section>
